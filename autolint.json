@@ -1,0 +1,12 @@
+{
+  "paths": [
+    "lib/*.js",
+    "test/*.js"
+  ],
+  
+  "linterOptions": {
+    "indent": 2,
+    "onevar": false,
+    "maxlen": 120
+  }
+}
