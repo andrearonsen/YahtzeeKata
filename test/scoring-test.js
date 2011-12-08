@@ -82,6 +82,35 @@ var scoring = require("../lib/scoring");
     } 
   });
 
+  buster.testCase("Scoring LargeStraight", {
+    "should calculate score 20 for large straight placed on LargeStraight": function () {
+      assert.score([2,3,4,5,6], "LargeStraight", 20);
+    },
+
+    "should calculate score 0 when not large straight placed on LargeStraight": function () {
+      assert.score([2,3,4,5,1], "LargeStraight", 0); 
+    }
+  });
+
+  buster.testCase("Scoring FourOfAKind", {
+    "should calculate score 4 for roll [1,1,1,1,x] when placed on FourOfAKind": function () {
+      assert.score([1,1,1,1,6], "FourOfAKind", 4);
+    },
+
+    "should calculate score 8 for roll [2,2,2,2,x] when placed on FourOfAKind": function () {
+      assert.score([2,2,2,2,6], "FourOfAKind", 8);
+    },
+
+    "should calculate score 24 for roll [6,6,6,6,x] when placed on FourOfAKind": function () {
+      assert.score([6,6,6,6,1], "FourOfAKind", 24);
+    },
+    
+    "should calculate score 0 for not 4 of a kind when placed on FourOfAKind": function () {
+      assert.score([2,2,2,1,1], "FourOfAKind", 0);
+    }
+    
+  });
+
 }(scoring));
 
 
