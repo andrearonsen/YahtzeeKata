@@ -2,7 +2,7 @@ var buster = require("buster");
 var scoring = require("../lib/scoring");
 
 (function (S) {
-  "use strict";
+  "use strict"; 
 
   buster.assertions.add("score", {
     assert: function (roll, category, expected) {
