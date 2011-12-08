@@ -3,10 +3,17 @@
     "lib/*.js",
     "test/*.js"
   ],
-  
+
   "linterOptions": {
     "indent": 2,
     "onevar": false,
-    "maxlen": 120
+    "maxlen": 140,
+    "strict": true,
+      "node": true,
+    "predef": [
+      "module",
+      "require",
+      "assert"
+    ]
   }
 }
